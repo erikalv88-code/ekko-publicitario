@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ekko Publicitario | Gigantografía · Impresión · Branding · Lima</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --azul:        #2C3E6B;
+      --azul-medio:  #3D5490;
+      --azul-claro:  #5B8DD9;
+      --azul-suave:  #E8EEF8;
+      --gris-bg:     #F4F5F7;
+      --gris-line:   #E2E5EC;
+      --gris-medio:  #8A92A3;
+      --negro-texto: #1A1F2E;
+      --blanco:      #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--blanco);
+      color: var(--negro-texto);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8%;
+      height: 84px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gris-line);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .nav-logo img { display: block; }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--negro-texto);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--azul-claro); }
+
+    .nav-cta {
+      background: var(--azul);
+      color: var(--blanco) !important;
+      padding: 0.5rem 1.2rem !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--azul-medio) !important; color: var(--blanco) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0 8%;
+      padding-top: 84px;
+      max-width: none;
+      background: linear-gradient(135deg, var(--gris-bg) 0%, #EDF1F9 60%, var(--azul-suave) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42vw;
+      height: 42vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(91,141,217,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Patrón de puntos decorativo */
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: 8%; top: 12%;
+      width: 320px; height: 320px;
+      background-image: radial-gradient(var(--azul-claro) 1px, transparent 1px);
+      background-size: 22px 22px;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .hero-content { max-width: 640px; position: relative; z-index: 1; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--azul-claro);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px; height: 2px;
+      background: var(--azul-claro);
+    }
+
+    .hero h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--azul);
+    }
+
+    .hero h1 .hl {
+      color: var(--azul-claro);
+      position: relative;
+    }
+
+    .hero-sub {
+      margin-top: 1.6rem;
+      font-size: 1rem;
+      color: #4A5568;
+      max-width: 480px;
+      font-weight: 400;
+      line-height: 1.75;
+    }
+
+    .hero-ctas {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--azul);
+      color: var(--blanco);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover { background: var(--azul-medio); transform: translateY(-2px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 2px solid var(--azul);
+      color: var(--azul);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover { background: var(--azul); color: var(--blanco); }
+
+    .hero-badges {
+      margin-top: 3rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-badge {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-badge strong {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--azul);
+      line-height: 1;
+    }
+
+    .hero-badge span {
+      font-size: 0.72rem;
+      color: var(--gris-medio);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+    }
+
+    /* ── SECCIÓN GENÉRICA ── */
+    section { padding: 5rem 8%; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--azul-claro);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      display: block;
+      width: 20px; height: 2px;
+      background: var(--azul-claro);
+    }
+
+    .section-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--azul);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-desc {
+      font-size: 0.95rem;
+      color: #4A5568;
+      max-width: 520px;
+      margin-bottom: 3.5rem;
+      font-weight: 400;
+      line-height: 1.75;
+    }
+
+    /* ── SERVICIOS ── */
+    #servicios { background: var(--blanco); }
+
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .servicio-card {
+      background: var(--gris-bg);
+      border: 1px solid var(--gris-line);
+      padding: 2rem 1.8rem;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+    }
+
+    .servicio-card:hover {
+      box-shadow: 0 8px 32px rgba(44,62,107,0.1);
+      transform: translateY(-3px);
+      border-color: var(--azul-claro);
+    }
+
+    .servicio-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--azul-claro);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .servicio-card:hover::before { opacity: 1; }
+
+    .servicio-icon {
+      width: 44px; height: 44px;
+      background: var(--azul-suave);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .servicio-icon svg {
+      width: 22px; height: 22px;
+      color: var(--azul);
+    }
+
+    .servicio-card h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--azul);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .servicio-card p {
+      font-size: 0.83rem;
+      color: #4A5568;
+      line-height: 1.65;
+    }
+
+    .servicio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1.1rem;
+    }
+
+    .tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--azul-medio);
+      background: var(--azul-suave);
+      border: 1px solid rgba(91,141,217,0.25);
+      padding: 0.22rem 0.6rem;
+      border-radius: 2px;
+    }
+
+    /* ── GALERÍA ── */
+    #galeria { background: var(--gris-bg); }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 200px;
+      gap: 8px;
+    }
+
+    .galeria-item {
+      background: var(--gris-line);
+      overflow: hidden;
+      position: relative;
+      border-radius: 2px;
+    }
+
+    .galeria-item:nth-child(1) { grid-column: span 5; grid-row: span 2; }
+    .galeria-item:nth-child(2) { grid-column: span 4; }
+    .galeria-item:nth-child(3) { grid-column: span 3; }
+    .galeria-item:nth-child(4) { grid-column: span 4; }
+    .galeria-item:nth-child(5) { grid-column: span 3; grid-row: span 2; }
+    .galeria-item:nth-child(6) { grid-column: span 4; grid-row: span 2; }
+    .galeria-item:nth-child(7) { grid-column: span 5; }
+    .galeria-item:nth-child(8) { grid-column: span 3; }
+
+    .galeria-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .galeria-item:hover img { transform: scale(1.05); }
+
+    .galeria-placeholder {
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--gris-medio);
+    }
+
+    .galeria-placeholder svg { width: 26px; height: 26px; opacity: 0.5; }
+    .galeria-placeholder span { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.6; }
+
+    .galeria-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(44,62,107,0.75));
+      padding: 1rem 1rem 0.7rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blanco);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .galeria-item:hover .galeria-label { opacity: 1; }
+
+    /* ── DIFERENCIAL ── */
+    #diferencial { background: var(--azul); }
+
+    #diferencial .section-eyebrow { color: var(--azul-claro); }
+    #diferencial .section-eyebrow::before { background: var(--azul-claro); }
+    #diferencial .section-title { color: var(--blanco); }
+    #diferencial .section-desc { color: rgba(255,255,255,0.7); }
+
+    .diferencial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .diferencial-item {
+      border-top: 2px solid rgba(91,141,217,0.5);
+      padding-top: 1.3rem;
+    }
+
+    .diferencial-item h4 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--blanco);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .diferencial-item p {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+    }
+
+    /* ── CONTACTO ── */
+    #contacto { background: var(--blanco); }
+
+    .contacto-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contacto-info h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--azul);
+      margin-bottom: 1.2rem;
+    }
+
+    .contacto-info p {
+      font-size: 0.9rem;
+      color: #4A5568;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .contacto-links { display: flex; flex-direction: column; gap: 1rem; }
+
+    .contacto-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--negro-texto);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contacto-link:hover { color: var(--azul-claro); }
+
+    .contacto-link-icon {
+      width: 40px; height: 40px;
+      background: var(--azul-suave);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .contacto-link:hover .contacto-link-icon { background: var(--azul); }
+    .contacto-link:hover .contacto-link-icon svg { color: var(--blanco); }
+
+    .contacto-link-icon svg { width: 18px; height: 18px; color: var(--azul); transition: color 0.2s; }
+
+    .wsp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: #25D366;
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.95rem 1.8rem;
+      margin-top: 1.8rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .wsp-btn:hover { background: #1ebd59; transform: translateY(-2px); }
+    .wsp-btn svg { width: 20px; height: 20px; }
+
+    .contacto-form { display: flex; flex-direction: column; gap: 1rem; }
+
+    .contacto-form input,
+    .contacto-form textarea,
+    .contacto-form select {
+      background: var(--gris-bg);
+      border: 1px solid var(--gris-line);
+      color: var(--negro-texto);
+      padding: 0.85rem 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+      border-radius: 2px;
+    }
+
+    .contacto-form input::placeholder,
+    .contacto-form textarea::placeholder { color: var(--gris-medio); }
+
+    .contacto-form input:focus,
+    .contacto-form textarea:focus,
+    .contacto-form select:focus {
+      border-color: var(--azul-claro);
+      box-shadow: 0 0 0 3px rgba(91,141,217,0.12);
+    }
+
+    .contacto-form select option { background: var(--blanco); }
+    .contacto-form textarea { resize: vertical; min-height: 120px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--azul);
+      padding: 3.5rem 8% 2rem;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      margin-bottom: 1.8rem;
+    }
+
+    .footer-brand .nav-logo-text { color: var(--blanco); font-size: 1.7rem; }
+    .footer-brand .nav-logo-sub { color: var(--azul-claro); }
+
+    .footer-brand p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.8rem;
+      max-width: 240px;
+      line-height: 1.65;
+    }
+
+    .footer-nav h5 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--azul-claro);
+      margin-bottom: 1rem;
+    }
+
+    .footer-nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+
+    .footer-nav a {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover { color: var(--blanco); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-legal {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+    }
+
+    .footer-legal strong { color: rgba(255,255,255,0.65); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+
+      .galeria-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 150px;
+      }
+
+      .galeria-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+      .galeria-item:nth-child(1),
+      .galeria-item:nth-child(5) { grid-column: span 2; }
+
+      .contacto-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; }
+    }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+  
+/* ── SERVICIOS RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .servicios-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  div[style*="display:flex"][style*="justify-content:center"] { flex-wrap: wrap !important; }
+  div[style*="flex: 0 0 calc(25%"] { flex: 0 0 calc(50% - 0.75rem) !important; max-width: calc(50% - 0.75rem) !important; }
+}
+
+@media (max-width: 600px) {
+  .servicios-grid { grid-template-columns: 1fr !important; }
+  div[style*="display:flex"][style*="justify-content:center"] { flex-direction: column !important; }
+  div[style*="flex: 0 0 calc(50%"] { flex: 0 0 100% !important; max-width: 100% !important; }
+  div[style*="flex: 0 0 calc(25%"] { flex: 0 0 100% !important; max-width: 100% !important; }
+}
+
+
+/* ── HERO RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3.5rem) !important;
+    line-height: 1.1 !important;
+  }
+  .hero { padding: 0 5% !important; padding-top: 84px !important; }
+  .hero-ctas { flex-direction: column !important; }
+  .hero-ctas a { text-align: center !important; justify-content: center !important; }
+  .hero-badges { gap: 1.2rem !important; }
+}
+
+/* ── SECCIÓN QR RESPONSIVE ── */
+@media (max-width: 768px) {
+  #ekko-qr div[style*="display:grid"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  #ekko-qr img[alt="Mascota Ekko QR"] {
+    max-height: 250px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+
+/* ── CONTACTO RESPONSIVE ── */
+@media (max-width: 768px) {
+  .contacto-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── DIFERENCIAL RESPONSIVE ── */
+@media (max-width: 768px) {
+  .diferencial-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── CARRUSEL RESPONSIVE ── */
+@media (max-width: 600px) {
+  .carousel-slide {
+    flex: 0 0 calc(50% - 6px) !important;
+  }
+  .carousel-slide img {
+    height: 140px !important;
+  }
+}
+
+/* ── NAV RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 0 5% !important; }
+  .nav-links { display: none !important; }
+}
+
+/* ── FOOTER RESPONSIVE ── */
+@media (max-width: 768px) {
+  .footer-top { flex-direction: column !important; gap: 1.5rem !important; }
+  .footer-bottom { flex-direction: column !important; text-align: center !important; }
+  footer { padding: 2.5rem 5% 1.5rem !important; }
+}
+
+/* ── SECCIONES GENERALES RESPONSIVE ── */
+@media (max-width: 768px) {
+  section { padding: 3.5rem 5% !important; }
+  .section-title { font-size: clamp(1.6rem, 7vw, 2.2rem) !important; }
+  #cotizar-info .reveal ol { padding-left: 1rem !important; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#inicio" class="nav-logo">
+    <span style="display:inline-block;height:72px;width:102px;"><?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" style="height:72px;width:102px;" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 228.52 161.58">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6 {
+        fill-rule: evenodd;
+      }
+
+      .st1 {
+        fill: #657998;
+      }
+
+      .st2 {
+        fill: #5f606a;
+      }
+
+      .st7 {
+        clip-rule: evenodd;
+        fill: none;
+      }
+
+      .st3 {
+        stroke: #425069;
+        stroke-miterlimit: 22.93;
+        stroke-width: .36px;
+      }
+
+      .st3, .st4 {
+        fill: #425069;
+      }
+
+      .st5 {
+        fill: #6a98d0;
+      }
+
+      .st6 {
+        fill: #d4d1d2;
+      }
+
+      .st8 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="st7" d="M171.65,48.8c-12.83,1.76-20.74,13.13-17.94,27.77,2.78,14.55,14.54,23.31,27.36,21.55,12.91-1.77,20.8-13.23,18.02-27.78-2.8-14.65-14.54-23.31-27.44-21.53Z"/>
+    </clipPath>
+  </defs>
+  <path class="st3" d="M20.8,123.29h1.68v-5.75h2.08c2.31,0,3.93-1.41,3.93-3.94,0-3.91-3.03-3.91-4.21-3.91h-3.47v13.6h0ZM22.48,111.06h1.89c1.66,0,2.36.97,2.36,2.46,0,1.81-1.03,2.65-2.25,2.65h-2v-5.11h0ZM37.24,119.25c0,2.8,1.26,4.31,3.98,4.31s4-1.7,4-4.31v-9.56h-1.68v9.56c0,1.91-.53,2.93-2.32,2.93-1.66,0-2.31-.93-2.31-2.93v-9.56h-1.68v9.56h0ZM56.39,116.81h2c1.47,0,2.67.72,2.67,2.59,0,1.31-.61,2.51-2.38,2.51h-2.29v-5.11h0ZM54.71,123.29h3.7c2.84,0,4.4-1.12,4.4-3.89,0-1.68-.74-2.95-2.42-3.35v-.04c1.24-.36,1.98-1.6,1.98-2.84,0-2.65-1.71-3.49-3.49-3.49h-4.17v13.6h0ZM56.39,111.06h1.89c1.64,0,2.34.82,2.34,2.23,0,2.1-1.6,2.27-2.31,2.27h-1.92v-4.5h0ZM72.02,123.29h7.2v-1.49h-5.53v-12.12h-1.68v13.6h0ZM87.91,123.29h1.68v-13.6h-1.68v13.6h0ZM105.8,118.62c-.06,1.66-.34,3.56-2.38,3.56-2.32,0-2.63-2.55-2.63-5.7s.3-5.7,2.63-5.7c1.73,0,2.23,1.31,2.27,2.86h1.75c-.08-2.67-1.24-4.23-4.02-4.23-3.75,0-4.38,3.64-4.38,7.07s.51,7.07,4.38,7.07c2.97,0,3.98-2.36,4.13-4.93h-1.75ZM116.54,123.29h1.68v-13.6h-1.68v13.6h0ZM131.99,111.17h3.43v-1.49h-8.52v1.49h3.41v12.12h1.68v-12.12h0ZM141.79,123.29h1.75l1.01-3.73h4.34l.97,3.73h1.75l-3.66-13.6h-2.25l-3.92,13.6h0ZM146.79,111.61h.04l1.73,6.57h-3.66l1.89-6.57h0ZM160,123.29h1.68v-6.06h2.27c.86,0,1.89.11,2.02,1.98l.11,2.11c.04.67.17,1.68.46,1.96h2.02c-.4-.25-.65-.63-.72-2.13l-.11-2.32c-.08-1.16-.74-2.13-1.92-2.27v-.04c1.58-.38,2.1-1.94,2.1-3.43,0-2.15-1.35-3.41-3.49-3.41h-4.4v13.6h0ZM161.68,111.06h2c1.56,0,2.46.84,2.46,2.17,0,2.63-1.81,2.63-2.8,2.63h-1.66v-4.8h0ZM177.32,123.29h1.68v-13.6h-1.68v13.6h0ZM192.82,109.42c-3.75,0-4.38,3.64-4.38,7.07s.63,7.07,4.38,7.07,4.38-3.64,4.38-7.07-.63-7.07-4.38-7.07h0ZM192.82,110.79c2.32,0,2.63,2.55,2.63,5.7s-.31,5.7-2.63,5.7-2.63-2.55-2.63-5.7.31-5.7,2.63-5.7Z"/>
+  <path class="st4" d="M155.33,54.92l-25.62,25.48c-3.01,3.72-3.36,6.82,1.3,8.04l37.14,9.66-12.81-43.18Z"/>
+  <path class="st0" d="M167.4,49.2c-12.83,1.76-20.74,13.13-17.94,27.77,2.78,14.55,14.54,23.31,27.36,21.55,12.91-1.77,20.8-13.23,18.02-27.78-2.8-14.65-14.54-23.31-27.45-21.53Z"/>
+  <path class="st6" d="M169.22,49.2c-12.83,1.76-20.74,13.13-17.94,27.77,2.78,14.55,14.54,23.31,27.36,21.55,12.91-1.77,20.8-13.23,18.02-27.78-2.8-14.65-14.54-23.31-27.45-21.53Z"/>
+  <path class="st1" d="M171.65,48.8c-12.83,1.76-20.74,13.13-17.94,27.77,2.78,14.55,14.54,23.31,27.36,21.55,12.91-1.77,20.8-13.23,18.02-27.78-2.8-14.65-14.54-23.31-27.44-21.53Z"/>
+  <g class="st8">
+    <g>
+      <path class="st4" d="M137.32,75.99c1.38,5.59-.33,5.67,3.28,9.09l35.12-4.22c2.05-1.48,5.82-5.31,5.2-8.52-.85-4.45-5.12-7.01-9.18-6.45l-34.42,10.1Z"/>
+      <path class="st0" d="M175.73,80.85c-3.98.55-7.18-2.25-8.03-6.7-.85-4.45,1.15-7.96,5.12-8.51,4.06-.56,7.26,2.24,8.11,6.69.85,4.45-1.14,7.96-5.2,8.52Z"/>
+    </g>
+  </g>
+  <g>
+    <path class="st0" d="M152.96,98.71l-14.14-20.59,10-19.12c.91-1.75-.46-3.82-2.42-3.68l-13.36.95c-1.49.11-2.84,1.05-3.49,2.41l-7.42,15.83-2.28-32.04c-.13-1.87-1.73-3.26-3.6-3.12l-11.86.85c-1.78.13-3.16,1.73-3.03,3.6l4.18,58.67c.13,1.87,1.73,3.26,3.51,3.13l11.86-.85c1.87-.13,3.26-1.73,3.12-3.6l-1.13-15.88,10.18,16.36c.75,1.35,2.31,2.09,3.8,1.98l14.29-1.02c1.87-.13,2.93-2.37,1.79-3.88Z"/>
+    <path class="st2" d="M149.97,97.39l-14.14-20.59,10-19.12c.91-1.75-.46-3.82-2.42-3.68l-13.36.95c-1.49.11-2.84,1.05-3.49,2.41l-7.42,15.83-2.28-32.04c-.13-1.87-1.73-3.26-3.6-3.12l-11.86.85c-1.77.13-3.16,1.73-3.03,3.6l4.18,58.67c.13,1.87,1.73,3.26,3.51,3.13l11.86-.85c1.87-.13,3.26-1.73,3.12-3.6l-1.13-15.88,10.18,16.36c.75,1.35,2.31,2.09,3.8,1.98l14.29-1.02c1.87-.13,2.93-2.37,1.79-3.88Z"/>
+  </g>
+  <path class="st0" d="M110.93,102.3l-12.72-21.5,11.27-18.4c1.02-1.69-.2-3.84-2.17-3.83l-13.39.05c-1.5,0-2.9.85-3.64,2.17l-8.47,15.3-.11-32.12c0-1.87-1.51-3.37-3.38-3.36l-11.89.04c-1.78,0-3.27,1.51-3.27,3.38l.21,58.82c0,1.87,1.51,3.37,3.29,3.36l11.89-.04c1.87,0,3.37-1.51,3.36-3.38l-.06-15.92,9.05,17.01c.66,1.4,2.16,2.24,3.66,2.23l14.33-.05c1.87,0,3.08-2.17,2.05-3.75Z"/>
+  <path class="st2" d="M107.94,100.87l-12.64-21.54,11.33-18.36c1.03-1.69-.19-3.84-2.15-3.84h-13.39c-1.5,0-2.9.84-3.65,2.15l-8.52,15.27v-32.12c0-1.87-1.5-3.37-3.37-3.37h-11.89c-1.78,0-3.28,1.5-3.28,3.37v58.82c0,1.87,1.5,3.37,3.28,3.37h11.89c1.87,0,3.37-1.5,3.37-3.37v-15.92l8.99,17.05c.66,1.4,2.15,2.25,3.65,2.25h14.33c1.87,0,3.09-2.15,2.06-3.75Z"/>
+  <path class="st0" d="M41.49,88.81v-8.22h17.91c2.45,0,4.4-1.96,4.4-4.4v-7.15c0-2.35-1.96-4.31-4.4-4.31h-17.91v-7.63h21.04c2.35,0,4.31-1.96,4.31-4.31v-9.79c0-2.35-1.96-4.31-4.31-4.31H23.87c-2.45,0-4.4,1.96-4.4,4.31v59.8c0,2.45,1.96,4.4,4.4,4.4h39.54c2.45,0,4.4-1.96,4.4-4.4v-9.69c0-2.35-1.96-4.31-4.4-4.31h-21.93Z"/>
+  <path class="st2" d="M40.75,87.18v-7.87h17.14c2.34,0,4.21-1.87,4.21-4.21v-6.84c0-2.25-1.87-4.12-4.21-4.12h-17.14v-7.31h20.14c2.25,0,4.12-1.87,4.12-4.12v-9.37c0-2.25-1.87-4.12-4.12-4.12H23.89c-2.34,0-4.21,1.87-4.21,4.12v57.22c0,2.34,1.87,4.21,4.21,4.21h37.84c2.34,0,4.21-1.87,4.21-4.21v-9.27c0-2.25-1.87-4.12-4.21-4.12h-20.98Z"/>
+  <path class="st5" d="M183.6,39.86c.23-.67.96-1.02,1.63-.79.67.23,1.02.96.79,1.63l-2.19,6.33c-.23.67-.96,1.02-1.63.79-.67-.23-1.02-.96-.79-1.63l2.19-6.33Z"/>
+  <path class="st5" d="M199.52,48.88c.51-.49,1.32-.48,1.81.03.49.51.48,1.32-.03,1.81l-4.81,4.66c-.51.49-1.32.48-1.81-.03-.49-.51-.48-1.32.03-1.81l4.81-4.66Z"/>
+  <path class="st5" d="M207.56,67.09c.7-.12,1.36.36,1.47,1.05.12.7-.36,1.36-1.05,1.48l-6.6,1.12c-.7.12-1.36-.36-1.47-1.05-.12-.7.36-1.36,1.05-1.48l6.6-1.12Z"/>
+</svg></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#galeria">Trabajos</a></li>
+    <li><a href="#diferencial">Nosotros</a></li>
+    <li><a href="#ekko-qr">Ekko QR</a></li>
+    <li><a href="#contacto" class="nav-cta">Cotizar</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Lima, Perú · Producción publicitaria</p>
+    <h1>
+      Transformamos<br/>
+      ideas en<br/>
+      <span class="hl">proyectos reales.</span>
+    </h1>
+    <p class="hero-sub">
+      Diseño gráfico, producción publicitaria, merchandising e impresión para marcas que buscan destacar. Cada proyecto se trabaja con planificación, detalle y ejecución real.
+    </p>
+    <div class="hero-ctas">
+      <a href="#contacto" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        Solicitar cotización
+      </a>
+      <a href="#servicios" class="btn-outline">Ver servicios</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge">
+        <strong>100%</strong>
+        <span>Producción propia</span>
+      </div>
+      <div class="hero-badge">
+        <strong>8+</strong>
+        <span>Líneas de servicio</span>
+      </div>
+      <div class="hero-badge">
+        <strong>24h</strong>
+        <span>Respuesta garantizada</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICIOS ── -->
+<section id="servicios">
+  <div class="reveal">
+    <p class="section-eyebrow">Lo que hacemos</p>
+    <h2 class="section-title">Nuestros servicios</h2>
+    <p class="section-desc">En Ekko Publicitario desarrollamos soluciones visuales y publicitarias para negocios, marcas y emprendimientos que desean destacar con una imagen profesional. Trabajamos desde el diseño hasta la producción final, ofreciendo servicios como:</p>
+  </div>
+
+  
+    <div class="servicios-grid" style="grid-template-columns: repeat(4, 1fr);">
+<div class="servicio-card reveal">
+      <div class="servicio-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/></svg>
+      </div>
+      <h3>Gigantografía</h3>
+      <p>Impresión de gran formato para exteriores e interiores. Alta resolución, materiales resistentes a la intemperie y al sol.</p>
+      <div class="servicio-tags">
+        <span class="tag">Banner</span>
+        <span class="tag">Vinil</span>
+        <span class="tag">Display</span>
+        <span class="tag">Roll Screen</span>
+        <span class="tag">Tótem</span>
+      </div>
+    </div><div class="servicio-card reveal reveal-delay-1">
+      <div class="servicio-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"/></svg>
+      </div>
+      <h3>Merchandising</h3>
+      <p>Productos promocionales personalizados con tu logo. Lapiceros, tazas, llaveros, mouse pads y más para tu marca o evento.</p>
+      <div class="servicio-tags">
+        <span class="tag">Corporativo</span>
+        <span class="tag">Eventos</span>
+        <span class="tag">Promo</span>
+      </div>
+    </div><div class="servicio-card reveal reveal-delay-2">
+      <div class="servicio-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/></svg>
+      </div>
+      <h3>Diseño e Impresión 3D</h3>
+      <p>Piezas personalizadas, prototipos, figuras, accesorios, decoración y proyectos especiales.</p>
+      <div class="servicio-tags">
+        <span class="tag">PLA</span>
+        <span class="tag">PETG</span>
+        <span class="tag">TPU</span>
+        <span class="tag">ABS</span>
+      </div>
+    </div><div class="servicio-card reveal">
+      <div class="servicio-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+      </div>
+      <h3>Acrílico y Láser</h3>
+      <p>Corte y grabado láser de precisión en acrílico, madera y materiales compuestos. Señalética premium, displays y decoración corporativa.</p>
+      <div class="servicio-tags">
+        <span class="tag">Corte</span>
+        <span class="tag">Grabado</span>
+        <span class="tag">Señalética</span>
+        <span class="tag">Acrílico</span>
+      </div>
+    </div>
+    </div>
+    <div class="servicios-grid" style="display:flex; gap:1.5rem; margin: 1.5rem 0 0; justify-content:center;">
+<div class="servicio-card reveal reveal-delay-1" style="flex: 0 0 calc(25% - 1.125rem); max-width: calc(25% - 1.125rem);">
+      <div class="servicio-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"/></svg>
+      </div>
+      <h3>Sublimación</h3>
+      <p>Transferencia de colores vivos y permanentes en textiles y productos rígidos. Camisas, tazas, almohadas, mouse pads y más.</p>
+      <div class="servicio-tags">
+        <span class="tag">Camisas</span>
+        <span class="tag">Tazas</span>
+        <span class="tag">Full color</span>
+        <span class="tag">Permanente</span>
+      </div>
+    </div><div class="servicio-card reveal reveal-delay-2" style="flex: 0 0 calc(25% - 1.125rem); max-width: calc(25% - 1.125rem);">
+      <div class="servicio-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"/></svg>
+      </div>
+      <h3>DTF y Bolsas Tótem</h3>
+      <p>Estampado textil DTF sin límite de colores, ideal para camisas y uniformes. Bolsas tótem personalizadas para tiendas y eventos.</p>
+      <div class="servicio-tags">
+        <span class="tag">DTF</span>
+        <span class="tag">Bolsas Tótem</span>
+        <span class="tag">Textil</span>
+      </div>
+    </div><div class="servicio-card reveal" style="flex: 0 0 calc(25% - 1.125rem); max-width: calc(25% - 1.125rem);">
+      <div class="servicio-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+      </div>
+      <h3>Confección de Uniformes</h3>
+      <p>Uniformes corporativos a medida para tu equipo. Confección de calidad combinada con bordado, sublimación o DTF para una imagen profesional.</p>
+      <div class="servicio-tags">
+        <span class="tag">Corporativo</span>
+        <span class="tag">Bordado</span>
+        <span class="tag">A medida</span>
+      </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- ── EKKO QR ── -->
+<section id="ekko-qr" style="background: var(--gris-bg);">
+  <div class="reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+
+    <div>
+      <p class="section-eyebrow">Nuevo servicio</p>
+      <h2 class="section-title" style="margin-bottom:1rem;">Ekko <span style="color:var(--azul-claro);">QR</span></h2>
+      <p style="font-size:0.95rem; color:#4A5568; line-height:1.75; margin-bottom:1rem;">
+        Convierte tu carta, catálogo o presentación en una <strong>mini página web</strong> accesible desde un código QR personalizado.
+      </p>
+      <p style="font-size:0.95rem; color:#4A5568; line-height:1.75; margin-bottom:2rem;">
+        Ideal para restaurantes, salones, tiendas, emprendimientos y eventos. Tu cliente escanea y accede al instante — sin apps, sin descargas.
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem;">
+        <span class="tag">Menús digitales</span>
+        <span class="tag">Catálogos</span>
+        <span class="tag">Tarjetas digitales</span>
+        <span class="tag">Eventos</span>
+        <span class="tag">Portafolios</span>
+      </div>
+      <a href="https://wa.me/51935672920?text=Hola,%20quisiera%20información%20sobre%20Ekko%20QR..." target="_blank" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Más información aquí
+      </a>
+    </div>
+
+    <div style="display:flex; align-items:center; justify-content:center;">
+      <img src="qrcito.png" alt="Mascota Ekko QR" style="max-height:420px;width:auto;display:block;filter:drop-shadow(0 8px 24px rgba(44,62,107,0.15));" />
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CÓMO COTIZAR ── -->
+<section id="cotizar-info" style="background: var(--azul);">
+  <div class="reveal">
+    <p class="section-eyebrow" style="color:var(--azul-claro);">Es muy fácil</p>
+    <h2 class="section-title" style="color:#fff; margin-bottom:1.2rem;">Cómo cotizar</h2>
+    <p style="color:rgba(255,255,255,0.75); font-size:0.95rem; margin-bottom:1.5rem;">
+      Para cotizar tu pedido, solo necesitamos:
+    </p>
+    <ol style="color:rgba(255,255,255,0.85); font-size:0.95rem; line-height:2; padding-left:1.4rem; margin-bottom:1.8rem;">
+      <li>Qué producto deseas realizar.</li>
+      <li>Medidas, cantidad o referencias.</li>
+      <li>Imagen, logo o diseño si ya lo tienes.</li>
+      <li>Fecha aproximada de entrega.</li>
+    </ol>
+    <p style="color:rgba(255,255,255,0.75); font-size:0.95rem; margin-bottom:2rem;">
+      Con esa información te preparamos una cotización según el material, tamaño, cantidad y nivel de personalización.
+    </p>
+    <a href="https://wa.me/51935672920?text=Hola,%20quisiera%20una%20cotizaci%C3%B3n%20para..." target="_blank" class="wsp-btn" style="display:inline-flex;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Enviar mi pedido por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ── GALERÍA ── -->
+<section id="galeria">
+  <div class="reveal">
+    <p class="section-eyebrow">Nuestro trabajo</p>
+    <h2 class="section-title">Trabajos realizados</h2>
+    <p class="section-desc">Una muestra de proyectos para clientes en Lima. Cada pieza diseñada y producida por Ekko.</p>
+  </div>
+
+  <div class="carousel-wrap reveal">
+    <button class="car-btn car-prev" onclick="carNav(-1)">&#8249;</button>
+    <div class="carousel-track-outer">
+      <div class="carousel-track" id="carTrack">
+    <div class="carousel-slide" onclick="openLightbox(0)">
+      <img src="" data-src="display-motorola.jpg" alt="Display curvo Motorola Solutions" loading="lazy" />
+      <div class="carousel-label">Display Gran Formato</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(1)">
+      <img src="" data-src="cartas-ananau.jpg" alt="Cartas impresas Añañáu Frites Chicken" loading="lazy" />
+      <div class="carousel-label">Impresión / Cartas</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(2)">
+      <img src="" data-src="stickers-maye.jpg" alt="Stickers personalizados Maye Tours" loading="lazy" />
+      <div class="carousel-label">Stickers / Vinil</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(3)">
+      <img src="" data-src="lanyards-motorola.jpg" alt="Lanyards sublimados Motorola Solutions" loading="lazy" />
+      <div class="carousel-label">Sublimación / Lanyards</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(4)">
+      <img src="" data-src="letrero-hampi.jpg" alt="Letrero luminoso LED Hampi Botanicals" loading="lazy" />
+      <div class="carousel-label">Señalética Luminosa</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(5)">
+      <img src="" data-src="panel-schneider.jpg" alt="Panel acrílico cortado láser Schneider Electric" loading="lazy" />
+      <div class="carousel-label">Acrílico y Láser</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(6)">
+      <img src="" data-src="pollitos-3d.jpg" alt="Figuras con bases impresas en 3D - Añañáu" loading="lazy" />
+      <div class="carousel-label">Impresión 3D / Merchandising</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(7)">
+      <img src="" data-src="ruleta-donuts.jpg" alt="Rueda de la suerte Divert Donuts" loading="lazy" />
+      <div class="carousel-label">Display Publicitario</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(8)">
+      <img src="" data-src="totem-jacky.jpg" alt="Tótem display Jacky Form" loading="lazy" />
+      <div class="carousel-label">Tótem Publicitario</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(9)">
+      <img src="" data-src="botellas-ekorollers.jpg" alt="Botellas personalizadas Eko Rollers con stickers" loading="lazy" />
+      <div class="carousel-label">Merchandising / Stickers</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(10)">
+      <img src="" data-src="lapiceros-motorola.jpg" alt="Lapiceros metálicos grabados Motorola Solutions" loading="lazy" />
+      <div class="carousel-label">Merchandising / Lapiceros</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(11)">
+      <img src="" data-src="billetera-motorola.jpg" alt="Billetera cuero grabada Motorola Solutions" loading="lazy" />
+      <div class="carousel-label">Grabado / Merchandising</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(12)">
+      <img src="" data-src="pollitos-empacados.jpg" alt="Figuras merchandising Añañáu empacadas" loading="lazy" />
+      <div class="carousel-label">Merchandising / Packaging</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(13)">
+      <img src="" data-src="etiquetas-hampi.jpg" alt="Etiquetas premium con foil dorado Hampi Botanicals" loading="lazy" />
+      <div class="carousel-label">Etiquetas Premium</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(14)">
+      <img src="" data-src="display-jacky2.jpg" alt="Display Jacky Form - juego interactivo" loading="lazy" />
+      <div class="carousel-label">Display Interactivo</div>
+    </div>
+    <div class="carousel-slide" onclick="openLightbox(15)">
+      <img src="" data-src="banner-motorola.jpg" alt="Banner vertical Motorola Solutions" loading="lazy" />
+      <div class="carousel-label">Banner / Gigantografía</div>
+    </div>
+      </div>
+    </div>
+    <button class="car-btn car-next" onclick="carNav(1)">&#8250;</button>
+  </div>
+
+  <div class="carousel-dots" id="carDots"></div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <div class="lb-inner" onclick="event.stopPropagation()">
+      <button class="lb-close" onclick="closeLightbox()">&#10005;</button>
+      <button class="lb-prev" onclick="lbNav(-1)">&#8249;</button>
+      <button class="lb-next" onclick="lbNav(1)">&#8250;</button>
+      <img id="lb-img" src="" alt="" />
+      <div class="lb-caption">
+        <span id="lb-label"></span>
+        <span id="lb-counter"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ── CARRUSEL ── */
+.carousel-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.carousel-track-outer {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 12px;
+  transition: transform 0.45s cubic-bezier(.4,0,.2,1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 calc(25% - 9px);
+  min-width: 0;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--gris-line);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.carousel-slide:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.85);
+}
+
+.carousel-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(44,62,107,0.82));
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1rem 0.7rem 0.45rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.carousel-slide:hover .carousel-label { opacity: 1; }
+
+.car-btn {
+  flex-shrink: 0;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--azul);
+  background: var(--blanco);
+  color: var(--azul);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  flex: 0 0 40px;
+}
+
+.car-btn:hover { background: var(--azul); color: var(--blanco); }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 1.2rem;
+}
+
+.carousel-dots .dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gris-line);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-dots .dot.active {
+  background: var(--azul);
+  transform: scale(1.3);
+}
+
+@media (max-width: 900px) {
+  .carousel-slide { flex: 0 0 calc(33.33% - 8px); }
+}
+@media (max-width: 600px) {
+  .carousel-slide { flex: 0 0 calc(50% - 6px); }
+  .carousel-slide img { height: 150px; }
+}
+
+/* ── LIGHTBOX ── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,14,26,0.95);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox.open { display: flex; }
+
+.lb-inner {
+  position: relative;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lb-img {
+  max-width: 88vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 2px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  display: block;
+}
+
+.lb-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.8rem;
+  padding: 0 0.2rem;
+}
+
+#lb-label {
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#lb-counter {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.75rem;
+}
+
+.lb-close {
+  position: absolute;
+  top: -2.5rem; right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lb-close:hover { opacity: 1; }
+
+.lb-prev, .lb-next {
+  position: fixed;
+  top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s;
+  line-height: 1;
+  border-radius: 2px;
+}
+
+.lb-prev { left: 1rem; }
+.lb-next { right: 1rem; }
+.lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.2); }
+</style>
+
+<script>
+const lbItems = [
+{src:"display-motorola.jpg",alt:"Display curvo Motorola Solutions",label:"Display Gran Formato"},
+{src:"cartas-ananau.jpg",alt:"Cartas impresas Añañáu Frites Chicken",label:"Impresión / Cartas"},
+{src:"stickers-maye.jpg",alt:"Stickers personalizados Maye Tours",label:"Stickers / Vinil"},
+{src:"lanyards-motorola.jpg",alt:"Lanyards sublimados Motorola Solutions",label:"Sublimación / Lanyards"},
+{src:"letrero-hampi.jpg",alt:"Letrero luminoso LED Hampi Botanicals",label:"Señalética Luminosa"},
+{src:"panel-schneider.jpg",alt:"Panel acrílico cortado láser Schneider Electric",label:"Acrílico y Láser"},
+{src:"pollitos-3d.jpg",alt:"Figuras con bases impresas en 3D - Añañáu",label:"Impresión 3D / Merchandising"},
+{src:"ruleta-donuts.jpg",alt:"Rueda de la suerte Divert Donuts",label:"Display Publicitario"},
+{src:"totem-jacky.jpg",alt:"Tótem display Jacky Form",label:"Tótem Publicitario"},
+{src:"botellas-ekorollers.jpg",alt:"Botellas personalizadas Eko Rollers con stickers",label:"Merchandising / Stickers"},
+{src:"lapiceros-motorola.jpg",alt:"Lapiceros metálicos grabados Motorola Solutions",label:"Merchandising / Lapiceros"},
+{src:"billetera-motorola.jpg",alt:"Billetera cuero grabada Motorola Solutions",label:"Grabado / Merchandising"},
+{src:"pollitos-empacados.jpg",alt:"Figuras merchandising Añañáu empacadas",label:"Merchandising / Packaging"},
+{src:"etiquetas-hampi.jpg",alt:"Etiquetas premium con foil dorado Hampi Botanicals",label:"Etiquetas Premium"},
+{src:"display-jacky2.jpg",alt:"Display Jacky Form - juego interactivo",label:"Display Interactivo"},
+{src:"banner-motorola.jpg",alt:"Banner vertical Motorola Solutions",label:"Banner / Gigantografía"}
+];
+
+// ── CARRUSEL ──
+const VISIBLE = 4;
+let carCurrent = 0;
+const totalSlides = lbItems.length;
+
+function carNav(dir) {
+  const maxPos = totalSlides - VISIBLE;
+  carCurrent = Math.max(0, Math.min(carCurrent + dir, maxPos));
+  updateCarousel();
+}
+
+function updateCarousel() {
+  const track = document.getElementById('carTrack');
+  const slideW = track.children[0].offsetWidth + 12;
+  track.style.transform = `translateX(${-carCurrent * slideW}px)`;
+  // Lazy load visible slides
+  const slides = track.querySelectorAll('.carousel-slide img');
+  slides.forEach((img, i) => {
+    if (i >= carCurrent && i < carCurrent + VISIBLE + 1) {
+      if (!img.src || img.src === window.location.href) img.src = img.dataset.src;
+    }
+  });
+  // Dots
+  document.querySelectorAll('.carousel-dots .dot').forEach((d, i) => {
+    d.classList.toggle('active', i === carCurrent);
+  });
+}
+
+function initCarousel() {
+  const dots = document.getElementById('carDots');
+  const maxPos = totalSlides - VISIBLE;
+  for (let i = 0; i <= maxPos; i++) {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => { carCurrent = i; updateCarousel(); };
+    dots.appendChild(d);
+  }
+  // Cargar primeras slides visibles
+  updateCarousel();
+}
+
+document.addEventListener('DOMContentLoaded', initCarousel);
+
+// ── LIGHTBOX ──
+let lbCurrent = 0;
+
+function openLightbox(i) {
+  lbCurrent = i;
+  renderLb();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function lbNav(dir) {
+  lbCurrent = (lbCurrent + dir + lbItems.length) % lbItems.length;
+  renderLb();
+}
+
+function renderLb() {
+  const item = lbItems[lbCurrent];
+  document.getElementById('lb-img').src = item.src;
+  document.getElementById('lb-img').alt = item.alt;
+  document.getElementById('lb-label').textContent = item.label;
+  document.getElementById('lb-counter').textContent = (lbCurrent + 1) + ' / ' + lbItems.length;
+}
+
+document.addEventListener('keydown', (e) => {
+  const lb = document.getElementById('lightbox');
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'ArrowRight') lbNav(1);
+  if (e.key === 'ArrowLeft') lbNav(-1);
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+<style>
+/* ── GALERÍA MASONRY ── */
+.galeria-masonry {
+  columns: 4;
+  column-gap: 10px;
+}
+
+.thumb {
+  break-inside: avoid;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  background: var(--gris-line);
+}
+
+.thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.thumb:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.88);
+}
+
+.thumb-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(44,62,107,0.82));
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1.2rem 0.8rem 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.thumb:hover .thumb-label { opacity: 1; }
+
+@media (max-width: 900px) { .galeria-masonry { columns: 3; } }
+@media (max-width: 600px) { .galeria-masonry { columns: 2; } }
+
+/* ── LIGHTBOX ── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,14,26,0.95);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox.open { display: flex; }
+
+.lb-inner {
+  position: relative;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lb-img {
+  max-width: 88vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 2px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  display: block;
+}
+
+.lb-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.8rem;
+  padding: 0 0.2rem;
+}
+
+#lb-label {
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#lb-counter {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.75rem;
+}
+
+.lb-close {
+  position: absolute;
+  top: -2.5rem; right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lb-close:hover { opacity: 1; }
+
+.lb-prev, .lb-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s;
+  line-height: 1;
+  border-radius: 2px;
+}
+
+.lb-prev { left: 1rem; }
+.lb-next { right: 1rem; }
+.lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.2); }
+</style>
+
+
+
+
+
+
+<!-- ── DIFERENCIAL ── -->
+<section id="diferencial">
+  <div class="reveal">
+    <p class="section-eyebrow">Por qué Ekko</p>
+    <h2 class="section-title">Producción propia.<br/>Entrega real.</h2>
+    <p class="section-desc">Sin intermediarios. Más control de calidad, mejores tiempos y precios directos al cliente.</p>
+  </div>
+  <div class="diferencial-grid">
+    <div class="diferencial-item reveal">
+      <h4>Producción propia</h4>
+      <p>Equipos propios: impresora 3D, cortadora láser y equipos de sublimación. Control total del proceso y tiempos de entrega más cortos.</p>
+    </div>
+    <div class="diferencial-item reveal reveal-delay-1">
+      <h4>Del concepto al producto</h4>
+      <p>Acompañamos cada proyecto desde el diseño gráfico hasta la pieza final producida. Cada detalle visual tiene un propósito y un valor.</p>
+    </div>
+    <div class="diferencial-item reveal reveal-delay-2">
+      <h4>Atención personalizada</h4>
+      <p>Coordinación directa por WhatsApp con seguimiento en tiempo real de cada pedido. Sin intermediarios ni demoras en la comunicación.</p>
+    </div>
+    <div class="diferencial-item reveal reveal-delay-3">
+      <h4>Lima y provincias</h4>
+      <p>Atención presencial en Breña, Lima, de lunes a sábado. Envíos coordinados a todo el país según requerimiento.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACTO ── -->
+<section id="contacto">
+  <div class="contacto-inner">
+    <div class="contacto-info reveal">
+      <p class="section-eyebrow">Contáctanos</p>
+      <h2>Hablemos de<br/>tu proyecto</h2>
+      <p>Cuéntanos qué necesitas y te enviamos una cotización sin compromiso. Respondemos en menos de 24 horas hábiles.</p>
+      <div class="contacto-links">
+        
+        <a href="mailto:contacto@ekkoqr.com" class="contacto-link">
+          <div class="contacto-link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          </div>
+          contacto@ekkoqr.com
+        </a>
+        <a href="#" class="contacto-link">
+          <div class="contacto-link-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          </div>
+          Breña, Lima — Perú
+        </a>
+      </div>
+      <a href="https://wa.me/51935672920?text=Hola,%20quisiera%20una%20cotizaci%C3%B3n%20para..." target="_blank" class="wsp-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Cotizar por WhatsApp
+      </a>
+    </div>
+
+    <div class="contacto-form reveal reveal-delay-1">
+      <div class="form-row">
+        <input type="text" placeholder="Nombre o empresa" />
+        <input type="tel" placeholder="WhatsApp / Teléfono" />
+      </div>
+      <select>
+        <option value="" disabled selected>¿Qué servicio necesitas?</option>
+        <option>Gigantografía / Banner / Vinil</option>
+        <option>Roll Screen / Display / Tótem</option>
+        <option>Merchandising</option>
+        <option>Impresión 3D</option>
+        <option>Acrílico y Láser</option>
+        <option>Sublimación</option>
+        <option>DTF / Bolsas Tótem</option>
+        <option>Confección de Uniformes</option>
+        <option>Varios / No sé aún</option>
+      </select>
+      <textarea placeholder="Cuéntanos sobre tu proyecto: qué necesitas, cantidad aproximada, fecha de entrega…"></textarea>
+      <a href="#" class="btn-primary" style="justify-content:center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+        Enviar mensaje
+      </a>
+      <p style="font-size:0.75rem;color:var(--gris-medio);text-align:center;">Te respondemos en menos de 24 horas hábiles</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" style="height:62px;width:auto;filter:brightness(0) invert(1);" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 228.52 161.58">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6 {
+        fill-rule: evenodd;
+      }
+
+      .st1 {
+        fill: #657998;
+      }
+
+      .st2 {
+        fill: #5f606a;
+      }
+
+      .st7 {
+        clip-rule: evenodd;
+        fill: none;
+      }
+
+      .st3 {
+        stroke: #425069;
+        stroke-miterlimit: 22.93;
+        stroke-width: .36px;
+      }
+
+      .st3, .st4 {
+        fill: #425069;
+      }
+
+      .st5 {
+        fill: #6a98d0;
+      }
+
+      .st6 {
+        fill: #d4d1d2;
+      }
+
+      .st8 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="st7" d="M171.65,48.8c-12.83,1.76-20.74,13.13-17.94,27.77,2.78,14.55,14.54,23.31,27.36,21.55,12.91-1.77,20.8-13.23,18.02-27.78-2.8-14.65-14.54-23.31-27.44-21.53Z"/>
+    </clipPath>
+  </defs>
+  <path class="st3" d="M20.8,123.29h1.68v-5.75h2.08c2.31,0,3.93-1.41,3.93-3.94,0-3.91-3.03-3.91-4.21-3.91h-3.47v13.6h0ZM22.48,111.06h1.89c1.66,0,2.36.97,2.36,2.46,0,1.81-1.03,2.65-2.25,2.65h-2v-5.11h0ZM37.24,119.25c0,2.8,1.26,4.31,3.98,4.31s4-1.7,4-4.31v-9.56h-1.68v9.56c0,1.91-.53,2.93-2.32,2.93-1.66,0-2.31-.93-2.31-2.93v-9.56h-1.68v9.56h0ZM56.39,116.81h2c1.47,0,2.67.72,2.67,2.59,0,1.31-.61,2.51-2.38,2.51h-2.29v-5.11h0ZM54.71,123.29h3.7c2.84,0,4.4-1.12,4.4-3.89,0-1.68-.74-2.95-2.42-3.35v-.04c1.24-.36,1.98-1.6,1.98-2.84,0-2.65-1.71-3.49-3.49-3.49h-4.17v13.6h0ZM56.39,111.06h1.89c1.64,0,2.34.82,2.34,2.23,0,2.1-1.6,2.27-2.31,2.27h-1.92v-4.5h0ZM72.02,123.29h7.2v-1.49h-5.53v-12.12h-1.68v13.6h0ZM87.91,123.29h1.68v-13.6h-1.68v13.6h0ZM105.8,118.62c-.06,1.66-.34,3.56-2.38,3.56-2.32,0-2.63-2.55-2.63-5.7s.3-5.7,2.63-5.7c1.73,0,2.23,1.31,2.27,2.86h1.75c-.08-2.67-1.24-4.23-4.02-4.23-3.75,0-4.38,3.64-4.38,7.07s.51,7.07,4.38,7.07c2.97,0,3.98-2.36,4.13-4.93h-1.75ZM116.54,123.29h1.68v-13.6h-1.68v13.6h0ZM131.99,111.17h3.43v-1.49h-8.52v1.49h3.41v12.12h1.68v-12.12h0ZM141.79,123.29h1.75l1.01-3.73h4.34l.97,3.73h1.75l-3.66-13.6h-2.25l-3.92,13.6h0ZM146.79,111.61h.04l1.73,6.57h-3.66l1.89-6.57h0ZM160,123.29h1.68v-6.06h2.27c.86,0,1.89.11,2.02,1.98l.11,2.11c.04.67.17,1.68.46,1.96h2.02c-.4-.25-.65-.63-.72-2.13l-.11-2.32c-.08-1.16-.74-2.13-1.92-2.27v-.04c1.58-.38,2.1-1.94,2.1-3.43,0-2.15-1.35-3.41-3.49-3.41h-4.4v13.6h0ZM161.68,111.06h2c1.56,0,2.46.84,2.46,2.17,0,2.63-1.81,2.63-2.8,2.63h-1.66v-4.8h0ZM177.32,123.29h1.68v-13.6h-1.68v13.6h0ZM192.82,109.42c-3.75,0-4.38,3.64-4.38,7.07s.63,7.07,4.38,7.07,4.38-3.64,4.38-7.07-.63-7.07-4.38-7.07h0ZM192.82,110.79c2.32,0,2.63,2.55,2.63,5.7s-.31,5.7-2.63,5.7-2.63-2.55-2.63-5.7.31-5.7,2.63-5.7Z"/>
+  <path class="st4" d="M155.33,54.92l-25.62,25.48c-3.01,3.72-3.36,6.82,1.3,8.04l37.14,9.66-12.81-43.18Z"/>
+  <path class="st0" d="M167.4,49.2c-12.83,1.76-20.74,13.13-17.94,27.77,2.78,14.55,14.54,23.31,27.36,21.55,12.91-1.77,20.8-13.23,18.02-27.78-2.8-14.65-14.54-23.31-27.45-21.53Z"/>
+  <path class="st6" d="M169.22,49.2c-12.83,1.76-20.74,13.13-17.94,27.77,2.78,14.55,14.54,23.31,27.36,21.55,12.91-1.77,20.8-13.23,18.02-27.78-2.8-14.65-14.54-23.31-27.45-21.53Z"/>
+  <path class="st1" d="M171.65,48.8c-12.83,1.76-20.74,13.13-17.94,27.77,2.78,14.55,14.54,23.31,27.36,21.55,12.91-1.77,20.8-13.23,18.02-27.78-2.8-14.65-14.54-23.31-27.44-21.53Z"/>
+  <g class="st8">
+    <g>
+      <path class="st4" d="M137.32,75.99c1.38,5.59-.33,5.67,3.28,9.09l35.12-4.22c2.05-1.48,5.82-5.31,5.2-8.52-.85-4.45-5.12-7.01-9.18-6.45l-34.42,10.1Z"/>
+      <path class="st0" d="M175.73,80.85c-3.98.55-7.18-2.25-8.03-6.7-.85-4.45,1.15-7.96,5.12-8.51,4.06-.56,7.26,2.24,8.11,6.69.85,4.45-1.14,7.96-5.2,8.52Z"/>
+    </g>
+  </g>
+  <g>
+    <path class="st0" d="M152.96,98.71l-14.14-20.59,10-19.12c.91-1.75-.46-3.82-2.42-3.68l-13.36.95c-1.49.11-2.84,1.05-3.49,2.41l-7.42,15.83-2.28-32.04c-.13-1.87-1.73-3.26-3.6-3.12l-11.86.85c-1.78.13-3.16,1.73-3.03,3.6l4.18,58.67c.13,1.87,1.73,3.26,3.51,3.13l11.86-.85c1.87-.13,3.26-1.73,3.12-3.6l-1.13-15.88,10.18,16.36c.75,1.35,2.31,2.09,3.8,1.98l14.29-1.02c1.87-.13,2.93-2.37,1.79-3.88Z"/>
+    <path class="st2" d="M149.97,97.39l-14.14-20.59,10-19.12c.91-1.75-.46-3.82-2.42-3.68l-13.36.95c-1.49.11-2.84,1.05-3.49,2.41l-7.42,15.83-2.28-32.04c-.13-1.87-1.73-3.26-3.6-3.12l-11.86.85c-1.77.13-3.16,1.73-3.03,3.6l4.18,58.67c.13,1.87,1.73,3.26,3.51,3.13l11.86-.85c1.87-.13,3.26-1.73,3.12-3.6l-1.13-15.88,10.18,16.36c.75,1.35,2.31,2.09,3.8,1.98l14.29-1.02c1.87-.13,2.93-2.37,1.79-3.88Z"/>
+  </g>
+  <path class="st0" d="M110.93,102.3l-12.72-21.5,11.27-18.4c1.02-1.69-.2-3.84-2.17-3.83l-13.39.05c-1.5,0-2.9.85-3.64,2.17l-8.47,15.3-.11-32.12c0-1.87-1.51-3.37-3.38-3.36l-11.89.04c-1.78,0-3.27,1.51-3.27,3.38l.21,58.82c0,1.87,1.51,3.37,3.29,3.36l11.89-.04c1.87,0,3.37-1.51,3.36-3.38l-.06-15.92,9.05,17.01c.66,1.4,2.16,2.24,3.66,2.23l14.33-.05c1.87,0,3.08-2.17,2.05-3.75Z"/>
+  <path class="st2" d="M107.94,100.87l-12.64-21.54,11.33-18.36c1.03-1.69-.19-3.84-2.15-3.84h-13.39c-1.5,0-2.9.84-3.65,2.15l-8.52,15.27v-32.12c0-1.87-1.5-3.37-3.37-3.37h-11.89c-1.78,0-3.28,1.5-3.28,3.37v58.82c0,1.87,1.5,3.37,3.28,3.37h11.89c1.87,0,3.37-1.5,3.37-3.37v-15.92l8.99,17.05c.66,1.4,2.15,2.25,3.65,2.25h14.33c1.87,0,3.09-2.15,2.06-3.75Z"/>
+  <path class="st0" d="M41.49,88.81v-8.22h17.91c2.45,0,4.4-1.96,4.4-4.4v-7.15c0-2.35-1.96-4.31-4.4-4.31h-17.91v-7.63h21.04c2.35,0,4.31-1.96,4.31-4.31v-9.79c0-2.35-1.96-4.31-4.31-4.31H23.87c-2.45,0-4.4,1.96-4.4,4.31v59.8c0,2.45,1.96,4.4,4.4,4.4h39.54c2.45,0,4.4-1.96,4.4-4.4v-9.69c0-2.35-1.96-4.31-4.4-4.31h-21.93Z"/>
+  <path class="st2" d="M40.75,87.18v-7.87h17.14c2.34,0,4.21-1.87,4.21-4.21v-6.84c0-2.25-1.87-4.12-4.21-4.12h-17.14v-7.31h20.14c2.25,0,4.12-1.87,4.12-4.12v-9.37c0-2.25-1.87-4.12-4.12-4.12H23.89c-2.34,0-4.21,1.87-4.21,4.12v57.22c0,2.34,1.87,4.21,4.21,4.21h37.84c2.34,0,4.21-1.87,4.21-4.21v-9.27c0-2.25-1.87-4.12-4.21-4.12h-20.98Z"/>
+  <path class="st5" d="M183.6,39.86c.23-.67.96-1.02,1.63-.79.67.23,1.02.96.79,1.63l-2.19,6.33c-.23.67-.96,1.02-1.63.79-.67-.23-1.02-.96-.79-1.63l2.19-6.33Z"/>
+  <path class="st5" d="M199.52,48.88c.51-.49,1.32-.48,1.81.03.49.51.48,1.32-.03,1.81l-4.81,4.66c-.51.49-1.32.48-1.81-.03-.49-.51-.48-1.32.03-1.81l4.81-4.66Z"/>
+  <path class="st5" d="M207.56,67.09c.7-.12,1.36.36,1.47,1.05.12.7-.36,1.36-1.05,1.48l-6.6,1.12c-.7.12-1.36-.36-1.47-1.05-.12-.7.36-1.36,1.05-1.48l6.6-1.12Z"/>
+</svg>
+      <p>Producción publicitaria integral en Lima. Diseño, impresión, confección y más bajo un mismo techo.</p>
+    </div>
+    <div class="footer-nav">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="#servicios">Gigantografía</a></li>
+        <li><a href="#servicios">Acrílico y Láser</a></li>
+        <li><a href="#servicios">Sublimación y DTF</a></li>
+        <li><a href="#servicios">Impresión 3D</a></li>
+        <li><a href="#servicios">Uniformes</a></li>
+      </ul>
+    </div>
+    <div class="footer-nav">
+      <h5>Empresa</h5>
+      <ul>
+        <li><a href="#diferencial">Nosotros</a></li>
+        <li><a href="#galeria">Trabajos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-nav">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="mailto:contacto@ekkoqr.com">contacto@ekkoqr.com</a></li>
+        <li><a href="#">Breña, Lima — Perú</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-lr" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:1.2rem; margin-bottom:1.2rem; text-align:center;">
+    <button onclick="document.getElementById('modal-lr').style.display='flex'" style="background:none; border:1px solid rgba(255,255,255,0.3); color:rgba(255,255,255,0.7); font-family:'Raleway',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:0.6rem 1.4rem; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.borderColor='#fff';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.color='rgba(255,255,255,0.7)'">
+      📋 Libro de Reclamaciones
+    </button>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <strong>Ekko Publicitario</strong> · RUC: 15602207509<br/>
+      Lima, Perú &nbsp;·&nbsp; © 2026 Ekko Publicitario. Todos los derechos reservados.
+    </div>
+    <div class="footer-legal" style="text-align:right;">
+      Comprobantes de pago disponibles<br/>
+      Boleta y Factura electrónica
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+<!-- ── MODAL LIBRO DE RECLAMACIONES ── -->
+<div id="modal-lr" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:2000; align-items:center; justify-content:center; padding:1rem;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#fff; max-width:540px; width:100%; border-radius:4px; overflow:hidden;">
+    
+    <!-- Header -->
+    <div style="background:var(--azul); padding:1.2rem 1.5rem; display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <p style="color:rgba(255,255,255,0.7); font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.2rem;">Ekko Publicitario · RUC 15602207509</p>
+        <h3 style="color:#fff; font-family:'Raleway',sans-serif; font-size:1.1rem; font-weight:800;">Libro de Reclamaciones</h3>
+      </div>
+      <button onclick="document.getElementById('modal-lr').style.display='none'" style="background:none; border:none; color:rgba(255,255,255,0.7); font-size:1.4rem; cursor:pointer; line-height:1;">✕</button>
+    </div>
+
+    <!-- Formulario -->
+    <div style="padding:1.5rem;">
+      <p style="font-size:0.8rem; color:#666; margin-bottom:1.2rem; line-height:1.6;">Conforme al Código de Protección y Defensa del Consumidor (Ley N° 29571), puedes registrar tu queja o reclamo a continuación.</p>
+      
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:0.8rem;">
+        <div>
+          <label style="font-size:0.72rem; font-weight:700; color:var(--azul); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:0.3rem;">Nombre completo *</label>
+          <input id="lr-nombre" type="text" style="width:100%; border:1px solid #ddd; padding:0.6rem 0.8rem; font-size:0.85rem; font-family:'Raleway',sans-serif; outline:none; border-radius:2px;" placeholder="Tu nombre" />
+        </div>
+        <div>
+          <label style="font-size:0.72rem; font-weight:700; color:var(--azul); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:0.3rem;">DNI / RUC *</label>
+          <input id="lr-dni" type="text" style="width:100%; border:1px solid #ddd; padding:0.6rem 0.8rem; font-size:0.85rem; font-family:'Raleway',sans-serif; outline:none; border-radius:2px;" placeholder="Documento" />
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:0.8rem;">
+        <div>
+          <label style="font-size:0.72rem; font-weight:700; color:var(--azul); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:0.3rem;">Correo *</label>
+          <input id="lr-email" type="email" style="width:100%; border:1px solid #ddd; padding:0.6rem 0.8rem; font-size:0.85rem; font-family:'Raleway',sans-serif; outline:none; border-radius:2px;" placeholder="correo@ejemplo.com" />
+        </div>
+        <div>
+          <label style="font-size:0.72rem; font-weight:700; color:var(--azul); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:0.3rem;">Teléfono</label>
+          <input id="lr-tel" type="tel" style="width:100%; border:1px solid #ddd; padding:0.6rem 0.8rem; font-size:0.85rem; font-family:'Raleway',sans-serif; outline:none; border-radius:2px;" placeholder="999 999 999" />
+        </div>
+      </div>
+
+      <div style="margin-bottom:0.8rem;">
+        <label style="font-size:0.72rem; font-weight:700; color:var(--azul); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:0.3rem;">Tipo *</label>
+        <select id="lr-tipo" style="width:100%; border:1px solid #ddd; padding:0.6rem 0.8rem; font-size:0.85rem; font-family:'Raleway',sans-serif; outline:none; border-radius:2px; background:#fff;">
+          <option value="">Selecciona...</option>
+          <option value="Queja">Queja (disconformidad con la atención)</option>
+          <option value="Reclamo">Reclamo (disconformidad con el producto/servicio)</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom:1.2rem;">
+        <label style="font-size:0.72rem; font-weight:700; color:var(--azul); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:0.3rem;">Descripción *</label>
+        <textarea id="lr-desc" rows="3" style="width:100%; border:1px solid #ddd; padding:0.6rem 0.8rem; font-size:0.85rem; font-family:'Raleway',sans-serif; outline:none; border-radius:2px; resize:vertical;" placeholder="Describe detalladamente tu queja o reclamo..."></textarea>
+      </div>
+
+      <button onclick="enviarLR()" style="width:100%; background:var(--azul); color:#fff; border:none; padding:0.9rem; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; border-radius:2px;">
+        Enviar por WhatsApp
+      </button>
+      <p style="font-size:0.7rem; color:#999; text-align:center; margin-top:0.6rem;">Recibirás respuesta en un plazo máximo de 30 días calendario.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function enviarLR() {
+  const nombre = document.getElementById('lr-nombre').value.trim();
+  const dni = document.getElementById('lr-dni').value.trim();
+  const email = document.getElementById('lr-email').value.trim();
+  const tel = document.getElementById('lr-tel').value.trim();
+  const tipo = document.getElementById('lr-tipo').value;
+  const desc = document.getElementById('lr-desc').value.trim();
+
+  if (!nombre || !dni || !email || !tipo || !desc) {
+    alert('Por favor completa todos los campos obligatorios (*)');
+    return;
+  }
+
+  const msg = `📋 *LIBRO DE RECLAMACIONES - Ekko Publicitario*
+  
+*Tipo:* ${tipo}
+*Nombre:* ${nombre}
+*DNI/RUC:* ${dni}
+*Correo:* ${email}
+*Teléfono:* ${tel || 'No indicado'}
+
+*Descripción:*
+${desc}`;
+
+  const url = 'https://wa.me/51935672920?text=' + encodeURIComponent(msg);
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
